@@ -272,3 +272,22 @@ input {
     border: 0.1rem #c0c0c0 solid;
     border-radius: 0.5rem;
 }
+/* admin */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    position: absolute;
+    display: none;
+    right: 0;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 1;
+    background-color: #203040;
+    margin: 0;
+    margin-top: 0.4rem;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

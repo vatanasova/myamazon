@@ -4,6 +4,7 @@ import config from './config';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
+import orderRoute from './routes/orderRoute';
 import bodyParser from 'body-parser';
 const app = require('express')();
 

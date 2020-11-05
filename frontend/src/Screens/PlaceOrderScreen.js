@@ -26,8 +26,8 @@ function PlaceOrderScreen(props) {
     const placeOrderHandler = () => {
         // create an order
         dispatch(createOrder({
-        orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
-        taxPrice, totalPrice
+            orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
+            taxPrice, totalPrice
         }));
     }
     useEffect(() => {
@@ -73,25 +73,24 @@ function PlaceOrderScreen(props) {
                             </div>
                             :
                             cartItems.map(item =>
-                            <li>
-                                <div className="cart-image">
-                                    <img src={item.image} alt="product" />
-                                </div>
-                                <div className="cart-name">
-                                    <div>
-                                        <Link to={"/product/" + item.product}>
-                                        {item.name}
-                                        </Link>
-
+                                <li>
+                                    <div className="cart-image">
+                                        <img src={item.image} alt="product" />
                                     </div>
-                                    <div>
-                                        Qty: {item.qty}
+                                    <div className="cart-name">
+                                        <div>
+                                            <Link to={"/product/" + item.product}>
+                                                {item.name}
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            Qty: {item.qty}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="cart-price">
-                                    ${item.price}
-                                </div>
-                            </li>
+                                    <div className="cart-price">
+                                        ${item.price}
+                                    </div>
+                                </li>
                             )
                         }
                     </ul>
